@@ -13,7 +13,7 @@ public class PanelOperaciones extends JPanel
 {
     //Atributos
     public JButton bCalcularCosto;
-    
+    public JButton bBorrar;
     
     public PanelOperaciones()
     {
@@ -27,16 +27,22 @@ public class PanelOperaciones extends JPanel
          
         //Creación y adicion de los botones
         bCalcularCosto = new JButton("Calcular costo del plan ");
-        bCalcularCosto.setFont(new Font("Arial", BOLD, 13));
+        bCalcularCosto.setFont(new Font("Arial", BOLD, 14));
         bCalcularCosto.setBounds(10,20,200,50);
         add(bCalcularCosto);
         bCalcularCosto.setActionCommand("calcular");
+        //boton borrar
+        bBorrar = new JButton("Salir ");
+        bBorrar.setFont(new Font("Arial", BOLD, 14));
+        bBorrar.setBounds(250,20,200,50);
+        add(bBorrar);
+        bBorrar.setActionCommand("salir");
 
     }
     public void agregarOyentesBotones(ActionListener pAL)
     {
         bCalcularCosto.addActionListener(pAL);
-        
+        bBorrar.addActionListener(pAL);
         
     }
     

@@ -76,7 +76,7 @@ public class EntradaDeDatos extends JPanel
 
     cbOperadores.addItem("Claro");
     cbOperadores.addItem("Movistar");
-    cbOperadores.addItem("WOW");
+    cbOperadores.addItem("WOM");
     cbOperadores.addItem("Virgin");
     }
     //Metodos de acceso a la informacion 

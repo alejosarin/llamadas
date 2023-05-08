@@ -45,20 +45,15 @@ public class Controlador implements ActionListener
             int cantidadMinutos = Integer.parseInt(venPrin.miPanelEntradaDatos.getCantidadMinutos());
             Double valorMinuto = Double.parseDouble(venPrin.miPanelEntradaDatos.getValorMinuto());
 
-            PlanTelefonia tele = new PlanTelefonia(numeroCel, cantidadMinutos, valorMinuto);
+            PlanTelefonia tele = new PlanTelefonia(numeroCel, cantidadMinutos, valorMinuto,Operador);
             
-            precioPlan = cantidadMinutos*valorMinuto;
             
-            if(Operador.equals("WOW"))
-            {   
-                precioPlan=precioPlan/2;
-                venPrin.miPanelResultados.mostrarResultado("El precio de el plan telefonico es "+precioPlan);
-            }
-            else
-            {
-                System.out.print("funcionando"+numeroCel+"  "+Operador+cantidadMinutos+valorMinuto); 
-            }
-            
+           tele.calcularPlan();
+           venPrin.miPanelResultados.mostrarResultado( "Numero: " + tele.getNumeroCelular() + "\nOperador: "+tele.getOperador() + "\nConsumo de minutos: "+tele.getCantidadMinutos() + "\nPrecio por minutos: " + tele.getValorMinuto()+"\nEl precio de el plan telefonico es "+tele.getCostoPlan());
+        }
+        if(comando.equals("salir"))
+        {
+            System.exit(0);
         }
         
         

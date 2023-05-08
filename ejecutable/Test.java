@@ -11,3 +11,4 @@ public class Test
         Controlador miControlador = new Controlador(miVentana,miModelo);
     }    
 }
+ 
