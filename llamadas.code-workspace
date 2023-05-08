@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../interfas/controlador"
+		},
+		{
+			"path": "../interfas/ejecutable"
+		},
+		{
+			"path": "../interfas/modelo"
+		},
+		{
+			"path": "../interfas/vista"
+		}
+	],
+	"settings": {}
+}
